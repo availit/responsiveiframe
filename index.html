@@ -44,11 +44,10 @@
     	<p>Below is the iframe containing the page's content</p>
 	</header>
 	<main>
-        <iframe width="100%" scrolling="no" id="apple-iFrame" src="https://web-dev.mainevent.com"></iframe>
-        <!-- <iframe width="100%" scrolling="no" id="apple-iFrame" src="./contentwindow.html"></iframe> -->
+        <!-- <iframe width="100%" scrolling="no" id="apple-iFrame" src="https://web-dev.mainevent.com"></iframe> -->
+        <iframe width="100%" scrolling="no" id="apple-iFrame" src="./contentwindow.html"></iframe>
     </main>
      <footer>
-      	<!-- For debugging: <p id="callback"></p> -->
         <h2>Parent Window Footer Content</h2>
         <p>Above is the page content within an iframe</p>
      </footer>
@@ -60,38 +59,6 @@
 			log 		: true, //For debugging purposes- set to false during production
 			checkOrigin : false
 		});
-	</script>
-    <!-- ======================
-    For Debugging purposes only
-    ===========================
-    <script type="text/javascript">
-			iFrameResize({
-				log                     : true,                  // Enable console logging
-				enablePublicMethods     : true,                  // Enable methods within iframe hosted page
-				resizedCallback         : function(messageData){ // Callback fn when resize is received
-					$('p#callback').html(
-						'<b>Frame ID:</b> '    + messageData.iframe.id +
-						' <b>Height:</b> '     + messageData.height +
-						' <b>Width:</b> '      + messageData.width + 
-						' <b>Event type:</b> ' + messageData.type
-					);
-				},
-				messageCallback         : function(messageData){ // Callback fn when message is received
-					$('p#callback').html(
-						'<b>Frame ID:</b> '    + messageData.iframe.id +
-						' <b>Message:</b> '    + messageData.message
-					);
-					alert(messageData.message);
-				},
-				closedCallback         : function(id){ // Callback fn when iFrame is closed
-					$('p#callback').html(
-						'<b>IFrame (</b>'    + id +
-						'<b>) removed from page.</b>'
-					);
-				}
-			});
-		</script> -->
-	<script>
 		$(document).ready(function(){
 		    $("body").removeClass("noJS");
 		});
