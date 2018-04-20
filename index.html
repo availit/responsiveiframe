@@ -44,19 +44,19 @@
     	<p>Below is the iframe containing the page's content</p>
 	</header>
 	<main>
-        <!-- <iframe width="100%" scrolling="no" id="apple-iFrame" src="https://web-dev.mainevent.com"></iframe> -->
-        <iframe width="100%" scrolling="no" id="apple-iFrame" src="./contentwindow.html"></iframe>
+        <iframe width="100%" scrolling="no" id="apple-iFrame" src="https://web-dev.mainevent.com"></iframe>
+        <!-- <iframe width="100%" scrolling="no" id="apple-iFrame" src="./contentwindow.html"></iframe> -->
     </main>
-     <footer>
+    <footer>
         <h2>Parent Window Footer Content</h2>
         <p>Above is the page content within an iframe</p>
-     </footer>
+    </footer>
     <script type="text/javascript" src="./jquery.min.js"></script>
 	<script type="text/javascript" src="./iframeResizer.min.js"></script>
 	<script type="text/javascript">
 		$('iframe').iFrameResize({
-			inPageLinks : true,
 			log 		: true, //For debugging purposes- set to false during production
+			inPageLinks : true,
 			checkOrigin : false
 		});
 		$(document).ready(function(){
